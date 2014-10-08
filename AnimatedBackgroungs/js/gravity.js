@@ -63,7 +63,7 @@
 
         // assign a circle to each point
         for(var i in points) {
-            var c = new Circle(points[i], 2+Math.random()*2, 'rgba(255,255,220,0.8)');
+            var c = new Circle(points[i], 2+Math.random()*5, 'rgba(255,255,220,0.8)');
             points[i].circle = c;
         }
     }
@@ -139,8 +139,8 @@
     }
 
     function shiftPoint(p) {
-        TweenLite.to(p, 1+1*Math.random(), {x:p.originX-50+Math.random()*100,
-            y: p.originY-50+Math.random()*100, ease:Circ.easeInOut,
+        TweenLite.to(p, 1+1*Math.random(), {x:p.originX-60+Math.random()*600,
+            y: p.originY-60+Math.random()*600, ease:Circ.easeInOut,
             onComplete: function() {
                 shiftPoint(p);
             }});
